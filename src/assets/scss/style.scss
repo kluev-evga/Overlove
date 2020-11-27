@@ -1,0 +1,187 @@
+// @import "node_modules/animate.css/animate.min";
+@import 'utils/libs';
+@import 'utils/vars';
+@import 'utils/mixins';
+@import 'utils/fonts';
+@import 'utils/reset';
+
+
+html {
+    line-height: $mainLineHeight;
+    font-size: $mainFontSize;
+    color: $mainFontColor;
+    height: 100%;
+
+    @media screen and (max-width: $desktopWidth) {
+        font-size: 16px;
+    }
+
+    @media screen and (max-width: $tableWidth) {
+        font-size: 15px;
+    }
+
+    @media screen and (max-width: $phoneWidth) {
+        font-size: 14px;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $mainFont;
+    font-size: $mainFontSize;
+    font-weight: $mainFontWeight;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+main {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+section,
+.section {
+    position: relative;
+    padding: 40px 0;
+
+    @media screen and (max-width: $smDesktopWidth) {
+        padding: 36px 0;
+    }
+
+    @media screen and (max-width: $tableWidth) {
+        padding: 28px 0;
+    }
+
+    @media screen and (max-width: $phoneWidth) {
+        padding: 20px 0;
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    min-height: 100vh;
+    min-width: 100vh;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    flex: 0 0 auto;
+    position: relative;
+    margin: 0 auto;
+    max-width: $desktopWidth;
+
+    @media screen and (max-width: $smDesktopWidth) {
+        max-width: $tableWidth;
+    }
+
+    @media screen and (max-width: $tableWidth) {
+        max-width: $phoneWidth;
+    }
+
+    @media screen and (max-width: $phoneWidth) {
+        max-width: $smPhoneWidth;
+    }
+}
+
+h1 {
+    font-size: rem(106);
+    line-height: 1.3;
+}
+
+h2 {
+    font-size: rem(60);
+}
+
+h3 {
+    font-size: rem(40);
+}
+
+h4 {
+    font-size: rem(32);
+}
+
+.button,
+.button-yellow-border,
+.button-yellow-solid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    text-transform: uppercase;
+    font-family: inherit;
+    cursor: pointer;
+    user-select: none;
+}
+
+.button-yellow-border {
+    border: 1px solid $yellow;
+}
+
+.button-yellow-solid {
+    background: $accent-color2;
+}
+
+.link-instagram {
+    background: no-repeat center/100% url(../images/svg/social-instagram.svg);
+}
+
+.link-behance {
+    background: no-repeat center/100% url(../images/svg/social-instagram.svg);
+}
+
+.link-dribble {
+    background: no-repeat center/100% url(../images/svg/social-instagram.svg);
+}
+
+// .link-instagram {
+//     background: no-repeat center/100% url(../images/svg/social-instagram.svg);
+// }
+// .link-instagram {
+//     background: no-repeat center/100% url(../images/svg/social-instagram.svg);
+// }
+
+/* Blocks */
+@import "blocks/01header.scss";
+@import "blocks/02preview.scss";
+@import "blocks/03testimonial.scss";
+@import "blocks/04slider.scss";
+@import "blocks/05features.scss";
+@import "blocks/06carousel.scss";
+@import "blocks/07team.scss";
+@import "blocks/08download.scss";
+@import "blocks/09footer.scss";

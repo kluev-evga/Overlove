@@ -1,0 +1,60 @@
+.preview {
+    background: no-repeat center/cover url(../images/bg-preview.jpg);
+    color: $default-color;
+
+    &__row {
+        margin-top: 250px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__col-left {
+        max-width: 900px;
+
+        p {
+            max-width: 620px;
+        }
+    }
+
+
+    .preview__cards-section {
+        margin-top: 160px;
+    }
+
+    .preview__cards {
+        display: flex;
+        justify-content: space-between;
+        gap: 32px;
+        margin-top: 32px;
+    }
+
+    .preview__card {
+        width: 480px;
+        height: 308px;
+        padding: 32px;
+        border-radius: 16px;
+
+        backdrop-filter: blur(24px);
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .preview__col-left {
+        p {
+            margin-top: 24px;
+            font-size: 24px;
+        }
+    }
+
+    .button-yellow-solid {
+        margin-top: 72px;
+        width: 300px;
+        height: 80px;
+        border-radius: 40px;
+        color: $font-color;
+
+        &::after {
+            content: url(../images/svg/button-preview.svg);
+            margin-left: 10px;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+.testimonial {
+    margin-top: 240px;
+
+    color: $font-color;
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        gap: 32px;
+    }
+
+    &__card {
+        max-width: 480px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    &__author {
+        font-size: 32px;
+    }
+
+    &__ocupation {
+        font-size: 16px;
+        font-weight: 500;
+        color: $accent-color1;
+    }
+}

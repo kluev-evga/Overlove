@@ -1,0 +1,66 @@
+.team {
+
+    &__row {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+
+    &__col-left {
+        max-width: 830px;
+    }
+
+    .button-yellow-solid {
+        width: 370px;
+        height: 80px;
+        border-radius: 40px;
+
+        &::after {
+            content: url(../images/svg/button-team.svg);
+            margin-left: 20px;
+        }
+    }
+
+    &__cards {
+        margin-top: 96px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__image {
+        width: 352px;
+        height: 434px;
+        object-fit: cover;
+        border-radius: 52px;
+    }
+
+    &__card-legend {
+        width: 272px;
+        height: 158px;
+        margin: 0 auto;
+        padding: 16px 32px;
+        transform: translateY(-105px);
+
+        display: flex;
+        flex-direction: column;
+
+        border-radius: 30px;
+        backdrop-filter: blur(8px);
+        background-color: rgba(228, 228, 228, 0.6);
+    }
+
+    &__name {
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    &__ocupation {
+        flex-grow: 1;
+        padding: 0;
+        color: $accent-color1;
+    }
+
+    &__socials img {
+        margin-right: 20px;
+    }
+}

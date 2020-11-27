@@ -1,0 +1,38 @@
+.features {
+    margin-top: 240px;
+
+    &__row {
+        margin-top: 96px;
+
+        display: grid;
+        grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+        grid-row-gap: 46px;
+        grid-column-gap: 96px;
+
+        div {
+            &:nth-of-type(1) h3 {
+                color: $yellow;
+            }
+
+            &:nth-of-type(2) h3 {
+                color: $coral;
+            }
+
+            &:nth-of-type(3) h3 {
+                color: $violet;
+            }
+
+            &:nth-of-type(4) h3 {
+                color: $green;
+            }
+
+            &:nth-of-type(5) h3 {
+                color: $blue;
+            }
+
+            &:nth-of-type(6) h3 {
+                color: $lilac;
+            }
+        }
+    }
+}

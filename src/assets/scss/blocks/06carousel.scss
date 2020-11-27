@@ -1,0 +1,86 @@
+.carousel {
+    height: 940px;
+    display: flex;
+    align-items: flex-end;
+
+    border-radius: 25px;
+    background: no-repeat center/cover url(../images/bg-carousel.jpg);
+
+    .carousel__body {
+        width: 820px;
+        height: 320px;
+        padding: 32px 64px;
+        margin-left: 32px;
+        margin-bottom: 105px;
+
+        border-radius: 16px;
+        backdrop-filter: blur(24px);
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .glide-carousel {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .glide__track {
+        flex-grow: 1;
+    }
+
+    .glide__slides {
+        height: 100%;
+    }
+
+    .glide-carousel__static-row {
+        cursor: default;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        user-select: none;
+    }
+
+    .bullets {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 20%;
+    }
+
+    .glide__bullet {
+        padding: 7px;
+        display: block;
+        border: 3px solid #a8c8e9;
+    }
+
+    .glide__bullet--active {
+        background: $accent-color2;
+    }
+
+    .glide__arrow--left,
+    .glide__arrow--right {
+        height: 50px;
+        width: 50px;
+        cursor: pointer;
+    }
+
+    .glide__arrow--left {
+        background: no-repeat center/contain url(../images/svg/chevron-left.svg);
+    }
+
+    .glide__arrow--right {
+        background: no-repeat center/contain url(../images/svg/chevron-right.svg);
+    }
+
+    .button-yellow-solid {
+        width: 160px;
+        height: 50px;
+        border-radius: 25px;
+
+        &::after {
+            content: url(../images/svg/flash-solid.svg);
+            margin-left: 5px;
+        }
+    }
+}

@@ -1,0 +1,70 @@
+.footer {
+
+    background: $footer-color;
+    color: $default-color;
+
+    &__row {
+        height: 224px;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 40px;
+    }
+
+    &__col {
+        display: flex;
+        flex-direction: column;
+
+        &:last-child b {
+            padding: 4px 0;
+        }
+    }
+
+    b {
+        font-size: 18px;
+        font-weight: 500;
+        padding: 4px;
+    }
+
+    a {
+        font-size: 12px;
+        letter-spacing: 0.75px;
+        color: #38b7af;
+        text-transform: uppercase;
+        padding: 4px;
+    }
+
+    hr {
+        border-color: #E5EDF533;
+        border-top: none;
+    }
+
+    form {
+        display: flex;
+        gap: 16px;
+    }
+
+    .button-yellow-border {
+        width: 160px;
+        height: 50px;
+        border-radius: 25px;
+        color: $accent-color2;
+
+        &::after {
+            content: url(../images/svg/flash-stroke.svg);
+            margin-left: 5px;
+        }
+    }
+
+    input {
+        height: 50px;
+        width: 312px;
+        border-radius: 25px;
+    }
+
+    &__copyrights {
+        height: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
