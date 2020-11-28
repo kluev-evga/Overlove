@@ -5,7 +5,6 @@
 @import 'utils/fonts';
 @import 'utils/reset';
 
-
 html {
     line-height: $mainLineHeight;
     font-size: $mainFontSize;
@@ -13,15 +12,19 @@ html {
     height: 100%;
 
     @media screen and (max-width: $desktopWidth) {
-        font-size: 16px;
+        font-size: 12px;
     }
 
     @media screen and (max-width: $tableWidth) {
-        font-size: 15px;
+        font-size: 8px;
     }
 
     @media screen and (max-width: $phoneWidth) {
-        font-size: 14px;
+        font-size: 7px;
+    }
+
+    @media screen and (max-width: $smPhoneWidth) {
+        font-size: 6px;
     }
 }
 
@@ -50,10 +53,6 @@ h6 {
     margin: 0;
 }
 
-a {
-    text-decoration: none;
-}
-
 ul,
 li {
     margin: 0;
@@ -62,117 +61,250 @@ li {
 }
 
 main {
-    max-width: 1920px;
-    margin: 0 auto;
-}
-
-section,
-.section {
-    position: relative;
-    padding: 40px 0;
-
-    @media screen and (max-width: $smDesktopWidth) {
-        padding: 36px 0;
-    }
-
-    @media screen and (max-width: $tableWidth) {
-        padding: 28px 0;
-    }
-
-    @media screen and (max-width: $phoneWidth) {
-        padding: 20px 0;
-    }
-}
-
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    min-height: 100vh;
-    min-width: 100vh;
-}
-
-.content-wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-.container {
     width: 100%;
-    flex: 0 0 auto;
-    position: relative;
     margin: 0 auto;
-    max-width: $desktopWidth;
+    overflow: hidden;
+}
 
-    @media screen and (max-width: $smDesktopWidth) {
-        max-width: $tableWidth;
-    }
-
-    @media screen and (max-width: $tableWidth) {
-        max-width: $phoneWidth;
-    }
-
-    @media screen and (max-width: $phoneWidth) {
-        max-width: $smPhoneWidth;
-    }
+img {
+    display: block;
+    object-fit: cover;
 }
 
 h1 {
     font-size: rem(106);
     line-height: 1.3;
+    color: $default-color;
 }
 
 h2 {
     font-size: rem(60);
+    color: $font-color;
 }
 
 h3 {
     font-size: rem(40);
+    color: $font-color;
 }
 
 h4 {
     font-size: rem(32);
+    color: $font-color;
 }
 
-.button,
+p {
+    color: $font-color-light;
+}
+
+p,
+span,
+b {
+    @media screen and (max-width: $phoneWidth) {
+        font-size: 14px;
+    }
+
+    @media screen and (max-width: $smPhoneWidth) {
+        font-size: 12px;
+    }
+}
+
+div {
+    color: $font-color;
+}
+
+span {
+    color: $accent-color1;
+}
+
+b {
+    color: $default-color;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 4px;
+}
+
+a {
+    display: block;
+    font-size: 12px;
+    text-decoration: none;
+    user-select: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    &:hover,
+    &:focus {
+        color: $accent-color2 !important;
+    }
+}
+
+button,
 .button-yellow-border,
-.button-yellow-solid {
+.button-yellow-solid,
+.button-yellow-solid-lg {
     display: flex;
     align-items: center;
     justify-content: center;
+
     background: transparent;
     text-transform: uppercase;
     font-family: inherit;
     cursor: pointer;
     user-select: none;
+    font-size: 14px;
+
+    &:hover,
+    &:focus {
+        color: $accent-color2;
+    }
 }
 
 .button-yellow-border {
-    border: 1px solid $yellow;
+    border: 2px solid $accent-color2;
+    width: 165px;
+    height: 50px;
+    border-radius: 25px;
+    color: $accent-color2;
+
+    i {
+        margin-left: 8px;
+        font-size: 28px;
+        color: inherit;
+    }
+
+    &:hover,
+    &:focus {
+        color: $default-color;
+    }
 }
 
-.button-yellow-solid {
+.button-yellow-solid,
+.button-yellow-solid-lg {
+    width: 160px;
+    height: 50px;
+    border-radius: 25px;
     background: $accent-color2;
+    color: $font-color;
+
+    i {
+        margin-left: 8px;
+        font-size: 28px;
+        color: inherit;
+    }
+
+    &:hover,
+    &:focus {
+        color: $default-color !important;
+    }
+
+    @media screen and (max-width: $smPhoneWidth) {
+        width: auto;
+    }
 }
 
-.link-instagram {
-    background: no-repeat center/100% url(../images/svg/social-instagram.svg);
+.button-yellow-solid-lg {
+    height: 80px;
+    border-radius: 40px;
+    font-size: 22px;
+
+    &::after {
+        content: url(../images/svg/button-preview.svg);
+        margin-left: 16px;
+    }
+
+    @media screen and (max-width: $phoneWidth) {
+        height: 60px;
+        border-radius: 30px;
+        font-size: 18px;
+    }
+
+    @media screen and (max-width: $smPhoneWidth) {
+        height: 50px;
+        border-radius: 25px;
+        font-size: 14px;
+
+        &::after {
+            margin-left: 8px;
+        }
+    }
 }
 
-.link-behance {
-    background: no-repeat center/100% url(../images/svg/social-instagram.svg);
+.socials {
+    display: flex;
+    gap: 10px;
+
+    a:hover i {
+        color: $accent-color2;
+    }
+
+    @media screen and (max-width: $smPhoneWidth) {
+        gap: 2px;
+
+        i::before {
+            font-size: 30px;
+        }
+    }
 }
 
-.link-dribble {
-    background: no-repeat center/100% url(../images/svg/social-instagram.svg);
+section {
+    margin: 0 auto;
+    max-width: 1920px;
 }
 
-// .link-instagram {
-//     background: no-repeat center/100% url(../images/svg/social-instagram.svg);
-// }
-// .link-instagram {
-//     background: no-repeat center/100% url(../images/svg/social-instagram.svg);
+.section {
+    max-width: 1580px;
+    margin: 0 auto;
+    padding: 0 65px;
+
+    @media screen and (max-width: $smDesktopWidth) {
+        padding: 0 30px;
+    }
+
+    @media screen and (max-width: $tableWidth) {
+        padding: 0 15px;
+    }
+
+    @media screen and (max-width: $phoneWidth) {
+        padding: 0 10px;
+    }
+}
+
+.container-margin {
+    margin-top: 140px;
+    margin-bottom: 140px;
+
+    @media screen and (max-width: $smDesktopWidth) {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    @media screen and (max-width: $tableWidth) {
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+
+    @media screen and (max-width: $phoneWidth) {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+}
+
+// .container {
+//     width: 100%;
+//     flex: 0 0 auto;
+//     position: relative;
+//     margin: 0 auto;
+
+//     @media screen and (max-width: $smDesktopWidth) {
+//         max-width: $tableWidth;
+//     }
+
+//     @media screen and (max-width: $tableWidth) {
+//         max-width: $phoneWidth;
+//     }
+
+//     @media screen and (max-width: $phoneWidth) {
+//         max-width: $smPhoneWidth;
+//     }
 // }
 
 /* Blocks */

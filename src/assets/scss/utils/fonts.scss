@@ -60,3 +60,67 @@
     src: local('Poppins Medium'), local('Poppins-Medium'),
         url('../fonts/Poppins-Medium.ttf') format('truetype');
 }
+
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('fonts/icomoon.eot?b5fna1');
+    src: url('../fonts/icomoon.eot?b5fna1#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.woff?b5fna1') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"]::before,
+[class*=" icon-"]::before {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-chevron-left::before {
+    content: "\e900";
+    font-size: 55px;
+    color: $font-color;
+}
+
+.icon-chevron-right::before {
+    content: "\e901";
+    font-size: 55px;
+    color: $font-color;
+}
+
+.icon-instagram::before {
+    content: "\e902";
+}
+
+.icon-telegram::before {
+    content: "\e903";
+}
+
+.icon-linkedin::before {
+    content: "\e904";
+}
+
+.icon-behance::before {
+    content: "\e905";
+}
+
+.icon-dribble::before {
+    content: "\e906";
+}
+
+.icon-flash::before {
+    content: "\e907";
+}
+
+.icon-play::before {
+    content: "\e908";
+}

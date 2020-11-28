@@ -1,0 +1,44 @@
+.slider {
+    p {
+        margin: 10px 0 50px;
+        max-width: 750px;
+    }
+
+    img {
+        border-radius: 20px;
+        width: 340px;
+        height: 380px;
+    }
+
+    .glide {
+        padding-left: 50px;
+    }
+
+    @media screen and (max-width: $smDesktopWidth) {
+        .glide {
+            padding-left: 30px;
+        }
+    }
+
+    @media screen and (max-width: $smTableWidth) {
+        img {
+            border-radius: 20px;
+            height: 300px;
+        }
+
+        .glide {
+            padding-left: 15px;
+        }
+    }
+
+    @media screen and (max-width: $smPhoneWidth) {
+        img {
+            border-radius: 10px;
+            height: 220px;
+        }
+
+        .glide {
+            padding-left: 10px;
+        }
+    }
+}

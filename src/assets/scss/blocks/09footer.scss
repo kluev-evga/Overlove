@@ -4,25 +4,32 @@
     color: $default-color;
 
     &__row {
-        height: 224px;
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         padding-top: 40px;
     }
 
     &__col {
+        flex-basis: 160px;
+        flex-grow: 1;
         display: flex;
         flex-direction: column;
+        padding-bottom: 32px;
+
+        border-bottom: 1px solid #E5EDF533;
+
+        &:nth-of-type(4) {
+            flex-basis: 220px;
+        }
+
+        &:last-of-type {
+            flex-basis: 530px;
+        }
 
         &:last-child b {
             padding: 4px 0;
         }
-    }
-
-    b {
-        font-size: 18px;
-        font-weight: 500;
-        padding: 4px;
     }
 
     a {
@@ -33,6 +40,17 @@
         padding: 4px;
     }
 
+    p {
+        color: $default-color;
+    }
+
+    span {
+        color: $default-color;
+        font-size: 12px;
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+
     hr {
         border-color: #E5EDF533;
         border-top: none;
@@ -41,18 +59,7 @@
     form {
         display: flex;
         gap: 16px;
-    }
-
-    .button-yellow-border {
-        width: 160px;
-        height: 50px;
-        border-radius: 25px;
-        color: $accent-color2;
-
-        &::after {
-            content: url(../images/svg/flash-stroke.svg);
-            margin-left: 5px;
-        }
+        flex-wrap: wrap;
     }
 
     input {
@@ -62,9 +69,31 @@
     }
 
     &__copyrights {
-        height: 90px;
+        min-height: 90px;
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
+    }
+
+    &__copyrights-col-left {
+        display: flex;
+    }
+
+    @media screen and (max-width: $smTableWidth) {
+        &__copyrights-col-left {
+            display: block;
+        }
+
+        &__copyrights>a {
+            align-self: flex-start;
+            padding-top: 8px;
+        }
+    }
+
+    @media screen and (max-width: $phoneWidth) {
+        input {
+            width: 100%;
+        }
     }
 }

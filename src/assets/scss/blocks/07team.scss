@@ -10,36 +10,35 @@
         max-width: 830px;
     }
 
-    .button-yellow-solid {
+    .button-yellow-solid-lg {
+        margin-top: 32px;
         width: 370px;
-        height: 80px;
-        border-radius: 40px;
-
-        &::after {
-            content: url(../images/svg/button-team.svg);
-            margin-left: 20px;
-        }
     }
 
     &__cards {
-        margin-top: 96px;
-        display: flex;
-        justify-content: space-between;
+        margin-top: 80px;
+        display: grid;
+        grid-template: 1fr / repeat(4, 1fr);
+        grid-gap: 96px;
+    }
+
+    &__card {
+        position: relative;
     }
 
     &__image {
-        width: 352px;
-        height: 434px;
-        object-fit: cover;
         border-radius: 52px;
+        width: 100%;
     }
 
     &__card-legend {
-        width: 272px;
-        height: 158px;
+        width: 90%;
+        height: 150px;
         margin: 0 auto;
         padding: 16px 32px;
-        transform: translateY(-105px);
+        position: absolute;
+        bottom: -70px;
+        left: 5%;
 
         display: flex;
         flex-direction: column;
@@ -49,18 +48,80 @@
         background-color: rgba(228, 228, 228, 0.6);
     }
 
-    &__name {
+    b {
+        color: $font-color;
         font-size: 24px;
         font-weight: 500;
     }
 
-    &__ocupation {
+    span {
         flex-grow: 1;
-        padding: 0;
-        color: $accent-color1;
     }
 
-    &__socials img {
-        margin-right: 20px;
+    i {
+        color: $accent-color1;
+        font-size: 46px;
+    }
+
+    @media screen and (max-width: 1580px) {
+        &__col-left {
+            max-width: 650px;
+        }
+
+        &__cards {
+            grid-template: repeat(2, 1fr) / repeat(2, minmax(auto, 400px));
+            justify-content: center;
+        }
+    }
+
+    @media screen and (max-width: $desktopWidth) {
+        &__cards {
+            margin-top: 40px;
+        }
+
+        &__row {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &__col-left {
+            max-width: 950px;
+        }
+    }
+
+    @media screen and (max-width: $tableWidth) {
+        &__cards {
+            margin-top: 20px;
+            grid-template: repeat(4, 1fr) / minmax(auto, 450px);
+            justify-content: center;
+        }
+
+        &__image {
+            border-radius: 32px;
+        }
+    }
+
+    @media screen and (max-width: $phoneWidth) {
+        .button-yellow-solid-lg {
+            width: 290px;
+        }
+    }
+
+    @media screen and (max-width: $smPhoneWidth) {
+        .button-yellow-solid-lg {
+            width: auto;
+        }
+
+        b {
+            font-size: 18px;
+        }
+
+        &__card-legend {
+            padding: 12px 16px;
+        }
+
+        &__image {
+            border-radius: 22px;
+        }
     }
 }

@@ -1,24 +1,107 @@
 .preview {
-    background: no-repeat center/cover url(../images/bg-preview.jpg);
-    color: $default-color;
+    background: center/cover url(../images/bg-preview.jpg);
 
     &__row {
-        margin-top: 250px;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    &__col-left {
-        max-width: 900px;
+        padding-top: 250px;
+        display: grid;
+        grid-template-columns: 3fr 1fr;
 
         p {
-            max-width: 620px;
+            margin-right: 100px;
+            margin-top: 24px;
+            margin-bottom: 72px;
+            font-size: 24px;
         }
     }
 
+    p,
+    h2,
+    h3 {
+        color: $default-color;
+    }
+
+    .previw__button-play {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(-50px);
+
+        i::before {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+            width: rem(120);
+            height: rem(120);
+            border-radius: 50%;
+            line-height: 0;
+
+            font-size: 45px;
+            letter-spacing: -5px;
+            color: $accent-color1;
+            mix-blend-mode: normal;
+        }
+
+        a {
+            border-radius: 50%;
+            backdrop-filter: blur(5px);
+            background-color: rgba(255, 255, 255, 0.25);
+            box-shadow: inset 0 0 0 0 #ffd503;
+
+            &:hover,
+            &:focus {
+                transition: all 0.6s ease-in;
+                box-shadow: inset 0 0 100px 100px #ffd503;
+            }
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: url(../images/svg/circle.svg);
+            background-size: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            pointer-events: none;
+
+            animation: previewCircles 2s linear infinite;
+
+            @keyframes previewCircles {
+
+                0% {
+                    background-size: 50%;
+                    opacity: 1;
+                }
+
+                50% {
+                    opacity: 1;
+                }
+
+                100% {
+                    background-size: 200%;
+                    opacity: 0.1;
+                }
+            }
+        }
+
+        &::after {
+            animation-delay: 1s;
+        }
+    }
+
+    .button-yellow-solid-lg {
+        width: 300px;
+    }
 
     .preview__cards-section {
-        margin-top: 160px;
+        padding: 140px 0;
     }
 
     .preview__cards {
@@ -30,7 +113,6 @@
 
     .preview__card {
         width: 480px;
-        height: 308px;
         padding: 32px;
         border-radius: 16px;
 
@@ -38,23 +120,76 @@
         background-color: rgba(255, 255, 255, 0.5);
     }
 
-    .preview__col-left {
-        p {
-            margin-top: 24px;
-            font-size: 24px;
+    @media screen and (max-width: $smDesktopWidth) {
+        .previw__button-play {
+            display: none;
+        }
+
+        &__row {
+            display: block;
+        }
+
+        .preview__cards {
+            flex-direction: column;
+        }
+
+        .preview__card {
+            width: 100%;
+            display: grid;
+            grid-template: repeat(2, auto) / auto 1fr;
+            grid-column-gap: 32px;
+
+            img {
+                grid-area: 1 / 1 / -1 / 2;
+            }
         }
     }
 
-    .button-yellow-solid {
-        margin-top: 72px;
-        width: 300px;
-        height: 80px;
-        border-radius: 40px;
-        color: $font-color;
+    @media screen and (max-width: $smTableWidth) {
+        .preview__cards-section {
+            padding: 100px 0;
+        }
+    }
 
-        &::after {
-            content: url(../images/svg/button-preview.svg);
-            margin-left: 10px;
+    @media screen and (max-width: $phoneWidth) {
+        &__row {
+            padding-top: 160px;
+
+            p {
+                margin-right: 0;
+                margin-bottom: 42px;
+                text-align: justify;
+            }
+        }
+
+        .preview__cards-section {
+            padding: 80px 0;
+        }
+
+        .preview__cards {
+            gap: 18px;
+        }
+
+        .button-yellow-solid-lg {
+            width: 230px;
+        }
+
+        .preview__card {
+            grid-template: auto / auto;
+
+            img {
+                justify-self: center;
+            }
+        }
+    }
+
+    @media screen and (max-width: $smPhoneWidth) {
+        .button-yellow-solid-lg {
+            width: 180px;
+        }
+
+        &__row p {
+            font-size: 16px;
         }
     }
 }
