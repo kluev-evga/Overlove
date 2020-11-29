@@ -52,6 +52,13 @@
         padding: 7px;
         display: block;
         border: 3px solid #a8c8e9;
+
+        transition: box-shadow 0.1s linear;
+
+        &:hover,
+        &:focus {
+            box-shadow: 0 0 2px 8px rgba(0, 0, 0, 0.5);
+        }
     }
 
     .glide__bullet--active {
@@ -64,6 +71,16 @@
         height: 50px;
         width: 50px;
         cursor: pointer;
+
+        display: inline-flex;
+        align-items: center;
+        border-radius: 4px;
+        transition: box-shadow 0.1s linear;
+
+        &:hover,
+        &:focus {
+            box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
+        }
     }
 
     @media screen and (max-width: $smDesktopWidth) {

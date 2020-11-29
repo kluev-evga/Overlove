@@ -1,0 +1,59 @@
+@media (print),
+(prefers-reduced-motion) {
+    * {
+        animation: unset !important;
+        transition: none !important;
+    }
+}
+
+.preview__cards-section h2 {
+    opacity: 0;
+    transition: opacity 0.1s linear;
+}
+
+.preview__card {
+    opacity: 0;
+    transform: translateZ(-3500px) translateX(3000px) rotateX(180deg);
+}
+
+.preview__cards-section.active {
+
+    h2 {
+        opacity: 1;
+    }
+
+    .preview__cards {
+
+        transform-style: preserve-3d;
+        perspective: 500px;
+
+        >div:first-of-type {
+            animation-duration: 0.6s;
+        }
+
+        >div:nth-of-type(2) {
+            animation-duration: 0.8s;
+            animation-delay: 0.2s
+        }
+
+        >div:nth-of-type(3) {
+            animation-duration: 1s;
+            animation-delay: 0.4s
+        }
+
+        .preview__card {
+            animation: animate cubic-bezier(.15, 1.25, .78, 1.0) forwards;
+
+            @keyframes animate {
+                from {
+                    opacity: 1;
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateZ(0) translateX(0) rotateX(0);
+                }
+            }
+        }
+    }
+}

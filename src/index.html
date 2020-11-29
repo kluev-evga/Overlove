@@ -9,16 +9,19 @@
             <p>
                First template from series templates to design web pages, using components system
             </p>
-            <button class="button-yellow-solid-lg">Let’s Go</button>
+            <button class="button-yellow-solid-lg">
+               Let’s Go
+               <span class="icon-add"><span class="path1"></span><span class="path2"></span></span>
+            </button>
          </div><!-- end preview__col-left -->
 
-         <div class="previw__button-play">
+         <div class="preview__button-play">
             <a href="#more"><i class="icon-play"></i></a>
          </div>
       </div><!-- end preview__row -->
 
 
-      <div class="preview__cards-section">
+      <div class="preview__cards-section" id="more" data-observer>
          <h2>How it works</h2>
 
          <div class="preview__cards">
@@ -49,13 +52,13 @@
 
 <!--
 -------------------------------------------------------------------------- 03-Testimonial -->
-<section class="testimonial section container-margin">
+<section class="testimonial section container-margin" data-observer>
 
-   <h2>Why you'll love it</h2>
+   <h2 class="wow animate__animated animate__bounceInLeft" data-wow-delay="0.6s">Why you'll love it</h2>
 
    <div class="testimonial__row">
 
-      <div class="testimonial__card">
+      <div class="testimonial__card wow animate__animated animate__bounceInLeft" data-wow-delay="0.4s">
          <img src="./assets/images/testimonial/avatar1.png" alt="avatar">
          <div class="testimonial__author">Sean Farmer</div>
          <span>CEO</span>
@@ -63,7 +66,7 @@
             Sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquat enim ad minim veniam lorem ipsum dolor.
          </p>
       </div>
-      <div class="testimonial__card">
+      <div class="testimonial__card wow animate__animated animate__bounceInLeft" data-wow-delay="0.2s">
          <img src="./assets/images/testimonial/avatar2.png" alt="avatar">
          <div class="testimonial__author">Nick Parker</div>
          <span>Wed-designer</span>
@@ -71,7 +74,7 @@
             Orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna dolore. Orem ipsum.
          </p>
       </div>
-      <div class="testimonial__card">
+      <div class="testimonial__card wow animate__animated animate__bounceInLeft">
          <img src="./assets/images/testimonial/avatar3.png" alt="avatar">
          <div class="testimonial__author">Mishel Latuale</div>
          <span>Project Manager</span>
@@ -86,7 +89,7 @@
 
 <!--
 -------------------------------------------------------------------------- 04-Slider -->
-<section class="slider container-margin">
+<section class="slider container-margin" data-observer>
 
    <div class="section">
 
@@ -151,39 +154,39 @@
 
 <!--
 -------------------------------------------------------------------------- 05-Features -->
-<section class="features section container-margin">
+<section class="features section container-margin wow bounceInUp" id="features" data-observer>
 
    <h2>Speed up your design process</h2>
 
    <div class="features__row">
 
-      <div class="features__tile">
-         <img src="./assets/images/svg/features1.svg" alt="features">
+      <div class="features__tile wow animate__animated animate__zoomIn animate__faster">
+         <span class="icon-features1"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
          <h3>Auto Layout </h3>
          <p>Sed do eiusmod tempor incididunt ut consectetur adipisicing elit,do eiusmod tempor incididunt ut labore et dolore</p>
       </div>
-      <div class="features__tile">
-         <img src="./assets/images/svg/features2.svg" alt="features">
+      <div class="features__tile wow animate__animated animate__zoomIn animate__faster" data-wow-delay="0.1s">
+         <span class="icon-features2"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
          <h3>Variants</h3>
          <p>Rorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
       </div>
-      <div class="features__tile">
-         <img src="./assets/images/svg/features3.svg" alt="features">
+      <div class="features__tile wow animate__animated animate__zoomIn animate__faster" data-wow-delay="0.2s">
+         <span class="icon-features6"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
          <h3>Components</h3>
          <p>Dor sum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore ma iusmod</p>
       </div>
-      <div class="features__tile">
-         <img src="./assets/images/svg/features4.svg" alt="features">
+      <div class="features__tile wow animate__animated animate__zoomIn animate__faster" data-wow-delay="0.3s">
+         <span class="icon-features4"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
          <h3>Atomic Design</h3>
          <p>Adipisicing elit, orem ipsum dolor sit amet, consectetur sed do eiusmod tempor incididunt ut labore et dolore magna </p>
       </div>
-      <div class="features__tile">
-         <img src="./assets/images/svg/features5.svg" alt="features">
+      <div class="features__tile wow animate__animated animate__zoomIn animate__faster" data-wow-delay="0.4s">
+         <span class="icon-features5"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
          <h3>Animated</h3>
          <p>Morem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
       </div>
-      <div class="features__tile">
-         <img src="./assets/images/svg/features6.svg" alt="features">
+      <div class="features__tile wow animate__animated animate__zoomIn animate__faster" data-wow-delay="0.5s">
+         <span class="icon-features3"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
          <h3>Responsive</h3>
          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
       </div>
@@ -195,7 +198,7 @@
 
 <!--
 -------------------------------------------------------------------------- 06-Carousel -->
-<section class="carousel section container-margin">
+<section class="carousel section container-margin" data-observer>
 
    <div class="carousel__body">
 
@@ -254,7 +257,7 @@
 
 <!--
 ------------------------------------------------------------------------------ 07-Team -->
-<section class="team section container-margin">
+<section class="team section container-margin" data-observer>
 
    <div class="team__row">
       <div class="team__col-left">
@@ -264,7 +267,9 @@
          </p>
       </div>
 
-      <button class="button-yellow-solid-lg">Join our team</button>
+      <button class="button-yellow-solid-lg">
+         Join our team<span class="icon-add"><span class="path1"></span><span class="path2"></span></span>
+      </button>
    </div><!-- end team row -->
 
    <div class="team__cards">
@@ -324,7 +329,7 @@
 
 <!--
 ------------------------------------------------------------------------------ 07-Team -->
-<div class="download">
+<div class="download" data-observer>
    <section class="section">
 
       <div class="download__header">Download the future</div>
@@ -333,8 +338,8 @@
       </p>
 
       <form name="signup">
-         <input type="mail">
-         <button class="button-yellow-solid">Sign Up<i class="icon-flash"></i></button>
+         <input type="email" placeholder="myMail@gmail.com">
+         <button class=" button-yellow-solid">Sign Up<i class="icon-flash"></i></button>
       </form><!-- end form -->
 
       <ul class="socials">

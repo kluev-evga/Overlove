@@ -1,4 +1,7 @@
 .slider {
+    background: no-repeat url(../images/svg/slider-bg.svg);
+    background-position: 90% -10px;
+
     p {
         margin: 10px 0 50px;
         max-width: 750px;
@@ -8,6 +11,28 @@
         border-radius: 20px;
         width: 340px;
         height: 380px;
+        transition: filter 0.3s ease-out 0.2s;
+
+
+        &:active {
+            filter: brightness(0.2) sepia(90%) hue-rotate(180deg);
+            transition: filter 0.01s linear;
+        }
+    }
+
+    li {
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 80%;
+            height: 100%;
+            z-index: -1;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 30px;
+            transform: translate(-8px) translateY(-100%);
+        }
     }
 
     .glide {
@@ -15,12 +40,23 @@
     }
 
     @media screen and (max-width: $smDesktopWidth) {
+        background-size: 60%;
+        background-position: 95% -10px;
+
+
         .glide {
             padding-left: 30px;
         }
     }
 
+    @media screen and (max-width: $smDesktopWidth) {
+        background-size: 45%;
+        background-position: 95% 50px;
+    }
+
     @media screen and (max-width: $smTableWidth) {
+        background-size: 40%;
+
         img {
             border-radius: 20px;
             height: 300px;

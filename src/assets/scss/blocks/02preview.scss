@@ -20,7 +20,7 @@
         color: $default-color;
     }
 
-    .previw__button-play {
+    &__button-play {
         position: relative;
         display: flex;
         align-items: center;
@@ -100,28 +100,29 @@
         width: 300px;
     }
 
-    .preview__cards-section {
+    &__cards-section {
         padding: 140px 0;
     }
 
-    .preview__cards {
+    &__cards {
         display: flex;
         justify-content: space-between;
         gap: 32px;
         margin-top: 32px;
     }
 
-    .preview__card {
+    &__card {
         width: 480px;
         padding: 32px;
         border-radius: 16px;
 
-        backdrop-filter: blur(24px);
-        background-color: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(10px);
+        background-color: #fff2;
+        position: relative;
     }
 
     @media screen and (max-width: $smDesktopWidth) {
-        .previw__button-play {
+        &__button-play {
             display: none;
         }
 
@@ -129,11 +130,11 @@
             display: block;
         }
 
-        .preview__cards {
+        &__cards {
             flex-direction: column;
         }
 
-        .preview__card {
+        &__card {
             width: 100%;
             display: grid;
             grid-template: repeat(2, auto) / auto 1fr;
@@ -146,7 +147,7 @@
     }
 
     @media screen and (max-width: $smTableWidth) {
-        .preview__cards-section {
+        &__cards-section {
             padding: 100px 0;
         }
     }
@@ -162,11 +163,11 @@
             }
         }
 
-        .preview__cards-section {
+        &__cards-section {
             padding: 80px 0;
         }
 
-        .preview__cards {
+        &__cards {
             gap: 18px;
         }
 
@@ -174,7 +175,7 @@
             width: 230px;
         }
 
-        .preview__card {
+        &__card {
             grid-template: auto / auto;
 
             img {

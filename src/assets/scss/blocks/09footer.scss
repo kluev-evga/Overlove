@@ -32,7 +32,8 @@
         }
     }
 
-    a {
+    a,
+    &__designed {
         font-size: 12px;
         letter-spacing: 0.75px;
         color: #38b7af;
@@ -66,6 +67,12 @@
         height: 50px;
         width: 312px;
         border-radius: 25px;
+
+        background: $accent-color1;
+
+        &:focus {
+            background: $default-color;
+        }
     }
 
     &__copyrights {

@@ -19,7 +19,7 @@
         margin-top: 80px;
         display: grid;
         grid-template: 1fr / repeat(4, 1fr);
-        grid-gap: 96px;
+        grid-gap: 80px;
     }
 
     &__card {
@@ -52,10 +52,6 @@
         color: $font-color;
         font-size: 24px;
         font-weight: 500;
-    }
-
-    span {
-        flex-grow: 1;
     }
 
     i {
