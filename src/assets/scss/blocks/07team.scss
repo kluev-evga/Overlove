@@ -2,17 +2,19 @@
 
     &__row {
         display: flex;
+        flex-wrap: wrap;
+        column-gap: 100px;
         align-items: flex-end;
         justify-content: space-between;
     }
 
     &__col-left {
-        max-width: 830px;
+        max-width: 800px;
     }
 
     .button-yellow-solid-lg {
-        margin-top: 32px;
         width: 370px;
+        margin-top: 32px;
     }
 
     &__cards {
@@ -24,100 +26,77 @@
 
     &__card {
         position: relative;
-    }
 
-    &__image {
-        border-radius: 52px;
-        width: 100%;
-    }
+        img {
+            border-radius: 50px;
+            width: 100%;
+        }
 
-    &__card-legend {
-        width: 90%;
-        height: 150px;
-        margin: 0 auto;
-        padding: 16px 32px;
-        position: absolute;
-        bottom: -70px;
-        left: 5%;
+        div {
+            width: 90%;
+            height: 150px;
+            margin: 0 auto;
+            padding: 16px 32px;
+            position: absolute;
+            bottom: -70px;
+            left: 5%;
 
-        display: flex;
-        flex-direction: column;
+            display: flex;
+            flex-direction: column;
 
-        border-radius: 30px;
-        backdrop-filter: blur(8px);
-        background-color: rgba(228, 228, 228, 0.6);
-    }
+            border-radius: 30px;
+            backdrop-filter: blur(8px);
+            background-color: rgba(228, 228, 228, 0.6);
+        }
 
-    b {
-        color: $font-color;
-        font-size: 24px;
-        font-weight: 500;
-    }
+        b {
+            color: $font-color;
+            font-size: 24px;
+            font-weight: 500;
+        }
 
-    i {
-        color: $accent-color1;
-        font-size: 46px;
+        i {
+            color: $accent-color1;
+            font-size: 46px;
+        }
     }
 
     @media screen and (max-width: 1580px) {
-        &__col-left {
-            max-width: 650px;
-        }
-
         &__cards {
             grid-template: repeat(2, 1fr) / repeat(2, minmax(auto, 400px));
             justify-content: center;
         }
-    }
 
-    @media screen and (max-width: $desktopWidth) {
-        &__cards {
-            margin-top: 40px;
-        }
-
-        &__row {
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        &__col-left {
-            max-width: 950px;
+        img {
+            border-radius: 30px;
         }
     }
 
     @media screen and (max-width: $tableWidth) {
+        .button-yellow-solid-lg {
+            width: 280px;
+        }
+
         &__cards {
-            margin-top: 20px;
+            margin-top: 40px;
             grid-template: repeat(4, 1fr) / minmax(auto, 450px);
             justify-content: center;
-        }
-
-        &__image {
-            border-radius: 32px;
-        }
-    }
-
-    @media screen and (max-width: $phoneWidth) {
-        .button-yellow-solid-lg {
-            width: 290px;
         }
     }
 
     @media screen and (max-width: $smPhoneWidth) {
         .button-yellow-solid-lg {
-            width: auto;
+            width: 100%;
         }
 
-        b {
-            font-size: 18px;
-        }
+        &__card {
+            div {
+                padding: 12px 16px;
+            }
 
-        &__card-legend {
-            padding: 12px 16px;
-        }
-
-        &__image {
-            border-radius: 22px;
+            b {
+                font-size: 18px;
+            }
         }
     }
 }

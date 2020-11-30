@@ -3,6 +3,11 @@
     background: $footer-color;
     color: $default-color;
 
+    .section {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
     &__row {
         display: flex;
         flex-wrap: wrap;

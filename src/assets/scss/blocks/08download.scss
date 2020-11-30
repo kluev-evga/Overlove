@@ -1,7 +1,9 @@
 .download {
     background: url(../images/bg-download.jpg);
 
-    section {
+    .section {
+        margin-top: 0;
+        margin-bottom: 0;
         height: 660px;
         display: flex;
         align-items: center;

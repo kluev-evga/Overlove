@@ -1,6 +1,6 @@
 .testimonial {
 
-    &__row {
+    &__cards {
         margin-top: 80px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -11,93 +11,98 @@
         display: grid;
         grid-template: repeat(3, auto) / auto 1fr;
         grid-column-gap: 26px;
-    }
-
-    &__author {
-        font-size: rem(32);
-    }
-
-    span {
-        grid-row-start: 2;
-        font-weight: 500;
-    }
-
-    img {
-        width: 65px;
-        height: 65px;
-        border-radius: 50%;
-        grid-area: 1 / 1 / 3 / 2;
-    }
-
-    p {
-        margin-top: 15px;
-        grid-column: 1 / span 2;
-    }
-
-    @media screen and (max-width: $desktopWidth) {
-        &__row {
-            margin-top: 40px;
-        }
 
         img {
-            grid-area: 1 / 1 / 2 / -1;
-            justify-self: center;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            grid-area: 1 / 1 / 3 / 2;
         }
 
-        &__author {
-            grid-area: 2 / 1 / 3 / -1;
-            text-align: center;
+        div {
+            font-size: rem(32);
         }
 
         span {
-            grid-area: 3 / 1 / 4 / -1;
-            text-align: center;
+            grid-row-start: 2;
+            font-weight: 500;
         }
 
         p {
-            text-align: justify;
+            margin-top: 15px;
+            grid-column: 1 / span 2;
+        }
+    }
+
+
+    @media screen and (max-width: $desktopWidth) {
+        &__cards {
+            margin-top: 40px;
+        }
+
+        &__card {
+            img {
+                grid-area: 1 / 1 / 2 / -1;
+                justify-self: center;
+            }
+
+            div {
+                grid-area: 2 / 1 / 3 / -1;
+                text-align: center;
+            }
+
+            span {
+                grid-area: 3 / 1 / 4 / -1;
+                text-align: center;
+            }
+
+            p {
+                text-align: justify;
+            }
         }
     }
 
     @media screen and (max-width: $tableWidth) {
-        &__row {
+        &__cards {
             margin-top: 20px;
             grid-template: repeat(3, 1fr) / 1fr;
             gap: 32px;
         }
 
-        &__author {
-            grid-area: unset;
-            text-align-last: left;
-        }
+        &__card {
+            img {
+                grid-area: 1 / 1 / 3 / 2;
+            }
 
-        span {
-            grid-area: unset;
-            text-align-last: left;
-        }
+            div {
+                grid-area: unset;
+                text-align-last: left;
+            }
 
-        img {
-            grid-area: 1 / 1 / 3 / 2;
+            span {
+                grid-area: unset;
+                text-align-last: left;
+            }
         }
     }
 
     @media screen and (max-width: $phoneWidth) {
         &__card {
             grid-template: auto / auto;
-        }
 
-        img {
-            grid-area: unset;
-        }
+            img {
+                grid-area: unset;
+            }
 
-        &__author,
-        span {
-            text-align: center;
-            justify-self: center;
-        }
+            div,
+            span {
+                text-align: center;
+                justify-self: center;
+            }
 
-        p {
-            grid-area: unset;
+            p {
+                grid-area: unset;
+            }
         }
     }
 }

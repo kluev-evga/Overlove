@@ -1,6 +1,5 @@
 .features {
-
-    &__row {
+    &__cards {
         margin-top: 80px;
 
         display: grid;
@@ -35,21 +34,22 @@
         }
     }
 
-    &__tile {
+    &__card {
         display: grid;
         grid-template: repeat(2, auto) / 100px auto;
         grid-column-gap: 20px;
+
+        span {
+            width: 100px;
+            object-fit: contain;
+            grid-area: 1 / 1 / -1 / 2;
+            font-size: 100px;
+        }
     }
 
-    span {
-        width: 100px;
-        object-fit: contain;
-        grid-area: 1 / 1 / -1 / 2;
-        font-size: 100px;
-    }
 
     @media screen and (max-width: $desktopWidth) {
-        &__row {
+        &__cards {
             margin-top: 40px;
             grid-template: repeat(3, 1fr) / repeat(2, 1fr);
             grid-row-gap: 48px;
@@ -58,7 +58,7 @@
     }
 
     @media screen and (max-width: $tableWidth) {
-        &__row {
+        &__cards {
             margin-top: 40px;
             grid-template: repeat(6, 1fr) / 1fr;
             grid-row-gap: 48px;
@@ -67,27 +67,27 @@
     }
 
     @media screen and (max-width: $smPhoneWidth) {
-        &__row {
+        &__cards {
             grid-row-gap: 15px;
         }
 
-        &__tile {
+        &__card {
             display: grid;
             grid-template: repeat(3, auto) / auto;
-        }
 
-        p {
-            text-align: justify;
-        }
+            span {
+                justify-self: center;
+                width: 60px;
+                font-size: 60px;
+            }
 
-        h3 {
-            text-align: center;
-        }
+            h3 {
+                text-align: center;
+            }
 
-        span {
-            justify-self: center;
-            width: 60px;
-            font-size: 60px;
+            p {
+                text-align: justify;
+            }
         }
     }
 }
