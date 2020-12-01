@@ -51,9 +51,10 @@ document.addEventListener("DOMContentLoaded", () => {
     new Glide(".glide", sliderProps).mount();
     new Glide(".glide-carousel", carouselProps).mount();
 
-    new WOW().init();
 
     addAnimations();
+
+    new WOW().init();
 
     ///////////////////////////////////////////////////////////////////_____BURGER
     const hamburger = document.querySelector(".hamburger");
