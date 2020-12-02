@@ -1,9 +1,13 @@
-// @import "node_modules/animate.css/animate.min";
-@import 'utils/libs';
+@import "@glidejs/glide/src/assets/sass/glide.core";
+@import "@glidejs/glide/src/assets/sass/glide.theme";
+@import 'animate.css/animate';
+
+
 @import 'utils/vars';
 @import 'utils/mixins';
 @import 'utils/fonts';
 @import 'utils/reset';
+@import 'utils/hamburger';
 
 
 html {
@@ -278,25 +282,6 @@ input[type="email"] {
         padding: 0 10px;
     }
 }
-
-// .container {
-//     width: 100%;
-//     flex: 0 0 auto;
-//     position: relative;
-//     margin: 0 auto;
-
-//     @media screen and (max-width: $smDesktopWidth) {
-//         max-width: $tableWidth;
-//     }
-
-//     @media screen and (max-width: $tableWidth) {
-//         max-width: $phoneWidth;
-//     }
-
-//     @media screen and (max-width: $phoneWidth) {
-//         max-width: $smPhoneWidth;
-//     }
-// }
 
 /* Blocks */
 @import "blocks/01header.scss";
